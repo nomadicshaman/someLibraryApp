@@ -1,6 +1,109 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
     box-sizing: border-box;
-    
+    padding: 0 1rem;
 }
+
+/* Genel Tablo Stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Yatay kaydırma için */
+  }
+  
+  /* Tablo Başlıkları ve Hücreleri */
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Tablo Başlıklarına tıklanabilirlik için işaretçiler */
+  th {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  th::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+  }
+  
+  th.sorted-asc::after {
+    content: '▲';
+  }
+  
+  th.sorted-desc::after {
+    content: '▼';
+  }
+  
+  /* Form Stili */
+  form {
+    max-width: 500px; /* Form genişliğini sınırlama */
+    margin: 20px auto; /* Formu ortalama */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Alanları */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  input[type="text"], input[type="number"], input[type="checkbox"] {
+    width: calc(100% - 22px); /* Padding ve border için hesaplama */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+  }
+  
+  /* Buton Stili */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="button"] {
+    background-color: #6c757d;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Dialog Stili */
+  dialog {
+    border: none;
+    padding: 0;
+    width: auto;
+    max-width: 90%;
+  }
+  
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
